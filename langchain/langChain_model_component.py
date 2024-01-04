@@ -23,7 +23,7 @@
 # from langchain_community.llms import OpenAI
 
 # from dotenv import load_dotenv
-# load_dotenv()  # .env 파일에서 환경 변수 로드
+# load_dotenv()  # .env 파일에서 환경 변수 로드.
 
 ### OpenAI API 키 설정 및 모델 로드
 # 사용 가능한 OpenAI 텍스트 생성 모델: text-davinci-003

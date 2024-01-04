@@ -1,6 +1,6 @@
 
 # 예제의 일부를 아래 블로그에서 퍼와서 사용함. 출처 : https://bcho.tistory.com/1412
-# LLM 모델처럼 단일 출력을 지원하는 모델이 아닌 Chat모델은 기존의 대화 히스토리를 기반으로 질문에 대한 답변을 출력함.
+# LLM 모델처럼 단일 출력을 지원하는 모델이 아닌 Chat모델은 기존의 대화 히스토리를 기반으로 질문에 대한 답변을 출력함
 
 ### LangChain Chat Model Example  ### 
 from langchain.chat_models import ChatOpenAI

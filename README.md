@@ -4,10 +4,17 @@
 
 ## 프로젝트 구조
 ```bash
-/hmy831004
+/self_learning
     /language_chain
         - __init__.py
-        - model.py
+        - lang_chain_example.py
+        - langChain_model_component.py
+        - langChain_prompt_template.py
+        - langChain_cache_component.py
+        - langChain_chat_model.py
+
+    /openai
+        - __init__.py
     /lamaindex
         - __init__.py
     /data

@@ -5,7 +5,7 @@
 ## 프로젝트 구조
 ```bash
 /self_learning
-    /language_chain
+    /langchain
         - __init__.py
         - lang_chain_example.py
         - langChain_model_component.py

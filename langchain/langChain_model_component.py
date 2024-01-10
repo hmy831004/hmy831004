@@ -30,9 +30,9 @@
 # 사용 가능한 OpenAI 채팅 모델: gpt-3.5-turbo, gpt-4
 
 # import os
-# os.environ['OPENAI_API_KEY'] = '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'
+# os.environ['OPENAI_API_KEY'] = '{YOUR_OPENAI_API_KEY}'
 from langchain.llms import OpenAI
-llm = OpenAI(openai_api_key="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")
+llm = OpenAI()
 # llm = OpenAI(model = 'text-davinci-003')
 prompt = "서울에서 유명한 거리 음식에 대해서 200자 이하로 설명해줘."
 print(llm.invoke(prompt)) # 동기 호출: 직접적인 결과 반환

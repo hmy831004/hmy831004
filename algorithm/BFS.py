@@ -21,7 +21,7 @@ dx = [1,0,-1,0]
 def BFS(y,x):
     rs = 1 
 
-    q = deque()
+    q = deque()                           
     q.append((y,x))
     while q :
         ey,ex = q.popleft()

@@ -32,17 +32,17 @@ from langchain_community.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.globals import set_llm_cache
 from langchain.cache import RedisCache
+
 from redis import Redis
 ## 이 부분만 다르고 위의 예제와 동일 하기 때문에 중복 코드는 작성 하지 않는다.
 set_llm_cache(RedisCache(redis_=Redis(host='{YOUR_REDIS_INTANCE_ADDRESS}',
   port={YOUR_REDIS_INSTANCE_PORT},
   password='{YOUR_REDIS_INSTANCE_PASSWORD}')))
 
+
 ### 시맨틱 캐싱 (Semantic Caching) ### 
 # 위의 예제 까지는 prompt가 동일 해야지만 캐싱이 된다 하지만 문맥상 같은 prompt를 캐싱하고 싶을 때는
 # 시맨틱 캐싱을 사용하여 prompt의 유사성을 검사한 후 캐싱에 사용할지 결정한다.
-
-
 from langchain.llms import OpenAI
 from langchain.callbacks import get_openai_callback
 from langchain.cache import RedisCache
@@ -70,6 +70,6 @@ with get_openai_callback() as callback:
     print("Total Tokens:",callback.total_tokens)
 
 ## 결과를 확인하면 두번째의 Total Tokens는 0 으로 유사한 prompt에 대해서도 캐싱이 수행 되었다.
-## 하지만 첫 번째 프롬프트는 10개의 예제를 원했고 두번째는 5가지의 예제를 원했지만 첫번째 prompt에 의해서 10가지의 예제를 출력하기 때문에
+## 하지만 첫 번째 프롬프트는 10개의 예제를 원했고 두번째는 5가 지의 예제를 원했지만 첫번째 prompt에 의해서 10가지의 예제를 출력하기 때문에
 ## 무분별하게 캐싱을 사용하게 되면 원하지 않는 결과를 불러 올 수 있다.
 ## 세부적으로 컨트롤 하기 위해서는 유사도 분석 알고리즘을 지정하고 임베딩 알고리즘과 벡터 데이터베이스를 이용해 캐싱 시스템을 구축 해야한다.

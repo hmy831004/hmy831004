@@ -7,11 +7,11 @@
 /self_learning
     /langchain
         - __init__.py
-        - lang_chain_example.py
         - langChain_model_component.py
         - langChain_prompt_template.py
         - langChain_cache_component.py
         - langChain_chat_model.py
+        - lang_chain_example.py
 
     /openai
         - __init__.py
